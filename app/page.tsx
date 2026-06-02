@@ -105,16 +105,16 @@ export default function Home() {
                     <span className="text-amber-500 font-black">1.</span> Property Management Services
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-amber-500 font-black">2.</span> Property Maintenance
+                    <span className="text-amber-500 font-black">2.</span> Property Maintenance Services
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-amber-500 font-black">3.</span> Property Legal Solutions
+                    <span className="text-amber-500 font-black">3.</span> Property Legal Services
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="text-amber-500 font-black">4.</span> Aged Care Services
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="text-amber-500 font-black">5.</span> Tenant Sourcing
+                    <span className="text-amber-500 font-black">5.</span> Tenant Sourcing Services
                   </li>
                 </ul>
               </div>
