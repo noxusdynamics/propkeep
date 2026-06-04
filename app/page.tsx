@@ -41,7 +41,12 @@ function AnimatedCounter({ target, suffix = "" }: { target: number; suffix?: str
 }
 
 export default function Home() {
-  const [emblaRef] = useEmblaCarousel({ loop: true, duration: 40 }, [
+  const [desktopEmblaRef] = useEmblaCarousel({ loop: true, duration: 40 }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false }),
+    Fade()
+  ]);
+
+  const [mobileEmblaRef] = useEmblaCarousel({ loop: true, duration: 40 }, [
     Autoplay({ delay: 4000, stopOnInteraction: false }),
     Fade()
   ]);
@@ -64,7 +69,7 @@ export default function Home() {
           <div className="absolute inset-0 z-20 bg-gradient-to-t from-stone-50/80 via-transparent to-transparent h-[15%] bottom-0 top-auto pointer-events-none"></div>
           <div className="absolute inset-0 z-20 bg-gradient-to-b from-stone-50/40 via-transparent to-transparent h-[10%] pointer-events-none"></div>
           
-          <div className="overflow-hidden h-full w-full" ref={emblaRef}>
+          <div className="overflow-hidden h-full w-full" ref={desktopEmblaRef}>
             <div className="flex h-full touch-pan-y">
               {carouselImages.map((src, index) => (
                 <div className="flex-[0_0_100%] min-w-0 h-full relative" key={index}>
@@ -136,7 +141,7 @@ export default function Home() {
 
           {/* Mobile Slideshow */}
           <div className="w-full h-[40vh] sm:h-[50vh] relative z-10 rounded-2xl overflow-hidden lg:hidden mt-8 mb-12 shadow-xl">
-            <div className="overflow-hidden h-full" ref={emblaRef}>
+            <div className="overflow-hidden h-full" ref={mobileEmblaRef}>
               <div className="flex h-full touch-pan-y">
                 {carouselImages.map((src, index) => (
                   <div className="flex-[0_0_100%] min-w-0 h-full relative" key={index}>
